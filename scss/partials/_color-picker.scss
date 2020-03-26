@@ -1,0 +1,90 @@
+.color-picker {
+  width: 100vw;
+  height: 33vh;
+
+  padding: 0 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  background: $color-picker-background;
+
+  @include viewport-5 {
+    min-height: 250px;
+  }
+}
+
+.picker-ranges {
+
+  &-hue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__label {
+      margin: 5px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+    &__input {
+      width: 100%;
+      max-width: 992px;
+    }
+  }
+
+  &-saturation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__label {
+      margin: 5px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+    &__input {
+      width: 100%;
+      max-width: 992px;
+    }
+  }
+
+  &-lightness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__label {
+      margin: 5px;
+
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+    &__input {
+      width: 100%;
+      max-width: 992px;
+    }
+  }
+}
+
+.picker-buttons {
+
+  display: flex;
+  justify-content: center;
+
+  &__add-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &-img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+}
