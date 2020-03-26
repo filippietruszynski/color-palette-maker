@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let addButton = document.querySelector('.picker-buttons__add-button');
 
     hueInput.value = Math.random() * 360;
-    hueInput.addEventListener('input', getHSLValues);
-    saturationInput.addEventListener('input', getHSLValues);
-    lightnessInput.addEventListener('input', getHSLValues);
+    hueInput.addEventListener('input', updateElo);
+    saturationInput.addEventListener('input', updateElo);
+    lightnessInput.addEventListener('input', updateElo);
     addButton.addEventListener('click', newPaletteSample);
 
     getHSLValues();
+    newPaletteSample();
 
     function getHSLValues() {
 
@@ -20,10 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let lightnessValue = lightnessInput.value;
         let HSLString = 'hsl(' + hueValue + ', ' + saturationValue + '%' + ', ' + lightnessValue + '%)';
 
-        document.querySelector('.palette-sample').style.backgroundColor = HSLString;
-        document.querySelector('.palette-sample__value').innerText = HSLToHex(hueValue, saturationValue, lightnessValue);
-
         return [hueValue, saturationValue, lightnessValue, HSLString];
+    }
+
+    function updateElo() {
+        document.querySelector('.palette-sample').style.backgroundColor =  getHSLValues()[3];
+        document.querySelector('.palette-sample__value').innerText = HSLToHex(getHSLValues()[0], getHSLValues()[1], getHSLValues()[2]);
     }
 
     function newPaletteSample() {
@@ -43,7 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
         button.innerHTML = '<img class="palette-sample__button-img" src="img/minus.svg" alt="">';
         document.querySelector('.palette-sample').appendChild(button);
         button.addEventListener('click', function () {
-            div.parentElement.removeChild(div);
+            if (document.querySelector('.color-palette').childElementCount > 1) {
+                div.parentElement.removeChild(div);
+            }
         });
     }
 
