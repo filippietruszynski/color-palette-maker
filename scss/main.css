@@ -29,7 +29,7 @@ body {
     [type='range']:focus::-ms-fill-upper {
       background: #f2f2f2; }
   [type='range']::-webkit-slider-runnable-track {
-    cursor: default;
+    cursor: pointer;
     height: 1px;
     transition: all .2s ease;
     width: 100%;
@@ -43,14 +43,14 @@ body {
     border: 1px solid #e5e5e5;
     border-radius: 50%;
     box-sizing: border-box;
-    cursor: default;
+    cursor: pointer;
     height: 19px;
     width: 19px;
     -webkit-appearance: none;
     margin-top: -9px; }
   [type='range']::-moz-range-track {
     box-shadow: 0 0 0 #1d1d1d, 0 0 0 #2a2a2a;
-    cursor: default;
+    cursor: pointer;
     height: 1px;
     transition: all .2s ease;
     width: 100%;
@@ -64,11 +64,11 @@ body {
     border: 1px solid #e5e5e5;
     border-radius: 50%;
     box-sizing: border-box;
-    cursor: default;
+    cursor: pointer;
     height: 19px;
     width: 19px; }
   [type='range']::-ms-track {
-    cursor: default;
+    cursor: pointer;
     height: 1px;
     transition: all .2s ease;
     width: 100%;
@@ -92,7 +92,7 @@ body {
     border: 1px solid #e5e5e5;
     border-radius: 50%;
     box-sizing: border-box;
-    cursor: default;
+    cursor: pointer;
     height: 19px;
     width: 19px;
     margin-top: 0.25px; }
@@ -100,13 +100,13 @@ body {
     cursor: not-allowed; }
 
 .color-palette {
-  width: 100vw;
-  height: 67vh;
+  height: 55vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, minmax(10px, 1fr)); }
   @media (min-width: 568px) {
     .color-palette {
+      height: 67vh;
       grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
       grid-template-rows: 1fr; } }
 
@@ -118,10 +118,11 @@ body {
     .palette-sample {
       flex-direction: column; } }
   .palette-sample__value {
+    font-size: 1.3em;
     text-transform: uppercase; }
   .palette-sample__button {
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
     background: none;
     border: none;
     cursor: pointer; }
@@ -130,60 +131,65 @@ body {
       height: 20px; }
 
 .color-picker {
-  width: 100vw;
-  height: 33vh;
-  padding: 0 30px;
+  height: 45vh;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background: #1d1d1d; }
   @media (min-width: 568px) {
     .color-picker {
+      height: 33vh;
       min-height: 250px; } }
 
-.picker-ranges-hue {
+.picker-ranges {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between; }
-  .picker-ranges-hue__label {
-    margin: 5px;
-    font-size: 0.8em;
-    text-transform: uppercase; }
-  .picker-ranges-hue__input {
-    width: 100%;
-    max-width: 992px; }
-.picker-ranges-saturation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; }
-  .picker-ranges-saturation__label {
-    margin: 5px;
-    font-size: 0.8em;
-    text-transform: uppercase; }
-  .picker-ranges-saturation__input {
-    width: 100%;
-    max-width: 992px; }
-.picker-ranges-lightness {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; }
-  .picker-ranges-lightness__label {
-    margin: 5px;
-    font-size: 0.8em;
-    text-transform: uppercase; }
-  .picker-ranges-lightness__input {
-    width: 100%;
-    max-width: 992px; }
+  justify-content: space-evenly; }
+  .picker-ranges-hue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .picker-ranges-hue__label {
+      margin: 5px 0 5px 0;
+      font-size: 1em;
+      text-transform: uppercase; }
+    .picker-ranges-hue__input {
+      width: 100%;
+      max-width: 992px; }
+  .picker-ranges-saturation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .picker-ranges-saturation__label {
+      margin: 5px 0 5px 0;
+      font-size: 1em;
+      text-transform: uppercase; }
+    .picker-ranges-saturation__input {
+      width: 100%;
+      max-width: 992px; }
+  .picker-ranges-lightness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .picker-ranges-lightness__label {
+      margin: 5px 0 5px 0;
+      font-size: 1em;
+      text-transform: uppercase; }
+    .picker-ranges-lightness__input {
+      width: 100%;
+      max-width: 992px; }
 
 .picker-buttons {
+  margin: 15px;
   display: flex;
   justify-content: center; }
   .picker-buttons__add-button {
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
     background: none;
     border: none;
     cursor: pointer; }
