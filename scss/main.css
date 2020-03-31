@@ -3,9 +3,14 @@
   padding: 0;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 body {
   color: #e5e5e5;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px; }
 
 [type='range'] {
@@ -34,8 +39,8 @@ body {
     border-radius: 0; }
   [type='range']::-webkit-slider-thumb {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-    background: #e5e5e5;
-    border: 3px solid #1d1d1d;
+    background: #1d1d1d;
+    border: 1px solid #e5e5e5;
     border-radius: 50%;
     box-sizing: border-box;
     cursor: default;
@@ -55,8 +60,8 @@ body {
     height: 1px; }
   [type='range']::-moz-range-thumb {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-    background: #e5e5e5;
-    border: 3px solid #1d1d1d;
+    background: #1d1d1d;
+    border: 1px solid #e5e5e5;
     border-radius: 50%;
     box-sizing: border-box;
     cursor: default;
@@ -83,8 +88,8 @@ body {
     border-radius: 0; }
   [type='range']::-ms-thumb {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-    background: #e5e5e5;
-    border: 3px solid #1d1d1d;
+    background: #1d1d1d;
+    border: 1px solid #e5e5e5;
     border-radius: 50%;
     box-sizing: border-box;
     cursor: default;
@@ -115,15 +120,14 @@ body {
   .palette-sample__value {
     text-transform: uppercase; }
   .palette-sample__button {
-    color: #e5e5e5;
-    font-family: 'Lato', sans-serif;
-    font-size: 30px;
+    width: 48px;
+    height: 48px;
     background: none;
     border: none;
     cursor: pointer; }
     .palette-sample__button-img {
-      width: 15px;
-      height: 15px; }
+      width: 20px;
+      height: 20px; }
 
 .color-picker {
   width: 100vw;
@@ -178,6 +182,8 @@ body {
   display: flex;
   justify-content: center; }
   .picker-buttons__add-button {
+    width: 48px;
+    height: 48px;
     background: none;
     border: none;
     cursor: pointer; }

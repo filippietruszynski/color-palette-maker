@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let button = document.createElement('button');
         button.className = 'palette-sample__button';
-        button.innerHTML = '<img class="palette-sample__button-img" src="img/minus.svg" alt="">';
+        button.innerHTML = '<img class="palette-sample__button-img" src="img/minus.svg" alt="remove color sample button">';
         document.querySelector('.palette-sample').appendChild(button);
         button.addEventListener('click', function () {
             if (document.querySelector('.color-palette').childElementCount > 1) {
