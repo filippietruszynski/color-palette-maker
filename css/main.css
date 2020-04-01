@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff");
+  src: url("../assets/font/roboto-light-webfont.woff2") format("woff2"), url("../assets/font/roboto-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -103,11 +103,11 @@ body {
   height: 55vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit, minmax(10px, 1fr)); }
+  grid-template-rows: repeat(auto-fit, minmax(0.25em, 1fr)); }
   @media (min-width: 568px) {
     .color-palette {
       height: 67vh;
-      grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(0.25em, 1fr));
       grid-template-rows: 1fr; } }
 
 .palette-sample {
@@ -118,7 +118,7 @@ body {
     .palette-sample {
       flex-direction: column; } }
   .palette-sample__value {
-    font-size: 1.3em;
+    font-size: 1.25em;
     text-transform: uppercase; }
   .palette-sample__button {
     width: 30px;
@@ -145,18 +145,20 @@ body {
 .picker-ranges {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: space-between; }
   .picker-ranges-hue {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between; }
     .picker-ranges-hue__label {
-      margin: 5px 0 5px 0;
       font-size: 1em;
+      margin: 5px 0;
       text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .picker-ranges-hue__label {
+          margin: 10px 0; } }
     .picker-ranges-hue__input {
-      width: 100%;
       max-width: 992px; }
   .picker-ranges-saturation {
     display: flex;
@@ -164,11 +166,13 @@ body {
     align-items: center;
     justify-content: space-between; }
     .picker-ranges-saturation__label {
-      margin: 5px 0 5px 0;
       font-size: 1em;
+      margin: 5px 0;
       text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .picker-ranges-saturation__label {
+          margin: 10px 0; } }
     .picker-ranges-saturation__input {
-      width: 100%;
       max-width: 992px; }
   .picker-ranges-lightness {
     display: flex;
@@ -176,15 +180,17 @@ body {
     align-items: center;
     justify-content: space-between; }
     .picker-ranges-lightness__label {
-      margin: 5px 0 5px 0;
       font-size: 1em;
+      margin: 5px 0;
       text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .picker-ranges-lightness__label {
+          margin: 10px 0; } }
     .picker-ranges-lightness__input {
-      width: 100%;
       max-width: 992px; }
 
 .picker-buttons {
-  margin: 15px;
+  margin: 20px 0 0 0;
   display: flex;
   justify-content: center; }
   .picker-buttons__add-button {
