@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let addButton = document.querySelector('.picker-buttons__add-button');
 
     hueInput.value = Math.random() * 360;
-    hueInput.addEventListener('input', updateElo);
-    saturationInput.addEventListener('input', updateElo);
-    lightnessInput.addEventListener('input', updateElo);
+    hueInput.addEventListener('input', updatePaletteSample);
+    saturationInput.addEventListener('input', updatePaletteSample);
+    lightnessInput.addEventListener('input', updatePaletteSample);
     addButton.addEventListener('click', newPaletteSample);
 
     newPaletteSample();
@@ -23,29 +23,31 @@ document.addEventListener("DOMContentLoaded", function () {
         return [hueValue, saturationValue, lightnessValue, HSLString];
     }
 
-    function updateElo() {
-        document.querySelector('.palette-sample').style.backgroundColor =  getHSLValues()[3];
+    function updatePaletteSample() {
+        document.querySelector('.palette-sample').style.backgroundColor = getHSLValues()[3];
         document.querySelector('.palette-sample__value').innerText = HSLToHex(getHSLValues()[0], getHSLValues()[1], getHSLValues()[2]);
     }
 
     function newPaletteSample() {
-        if (document.querySelector('.color-palette').childElementCount < 6) {
+        let colorPalette = document.querySelector('.color-palette');
+
+        if (colorPalette.childElementCount < 6) {
             let div = document.createElement('div');
             div.className = 'palette-sample';
             div.style.backgroundColor = getHSLValues()[3];
-            document.querySelector('.color-palette').prepend(div);
+            colorPalette.prepend(div);
 
             let span = document.createElement('span');
             span.className = 'palette-sample__value';
             span.innerText = HSLToHex(getHSLValues()[0], getHSLValues()[1], getHSLValues()[2]);
-            document.querySelector('.palette-sample').appendChild(span);
+            div.appendChild(span);
 
             let button = document.createElement('button');
             button.className = 'palette-sample__button';
             button.innerHTML = '<img class="palette-sample__button-img" src="assets/img/minus.svg" alt="remove color sample button">';
-            document.querySelector('.palette-sample').appendChild(button);
+            div.appendChild(button);
             button.addEventListener('click', function () {
-                if (document.querySelector('.color-palette').childElementCount > 1) {
+                if (colorPalette.childElementCount > 1) {
                     div.parentElement.removeChild(div);
                 } else {
                     alert("You can't remove the only color sample.")
@@ -56,10 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    /*
-    HSLToHex function based on the article:
-    https://css-tricks.com/converting-color-spaces-in-javascript/
-    */
+    /* HSLToHex function based on the article:
+    https://css-tricks.com/converting-color-spaces-in-javascript/ */
 
     function HSLToHex(hue, saturation, lightness) {
 
