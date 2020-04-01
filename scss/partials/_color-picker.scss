@@ -1,6 +1,5 @@
 .color-picker {
   height: 45vh;
-
   padding: 30px;
 
   display: flex;
@@ -11,7 +10,6 @@
 
   @include viewport-5 {
     height: 33vh;
-
     min-height: 250px;
   }
 }
@@ -19,7 +17,7 @@
 .picker-ranges {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   &-hue {
     display: flex;
@@ -28,13 +26,16 @@
     justify-content: space-between;
 
     &__label {
-      margin: 5px 0 5px 0;
       font-size: 1em;
+      margin: 5px 0;
       text-transform: uppercase;
+
+      @include viewport-7 {
+        margin: 10px 0;
+      }
     }
 
     &__input {
-      width: 100%;
       max-width: 992px;
     }
   }
@@ -46,13 +47,16 @@
     justify-content: space-between;
 
     &__label {
-      margin: 5px 0 5px 0;
       font-size: 1em;
+      margin: 5px 0;
       text-transform: uppercase;
+
+      @include viewport-7 {
+        margin: 10px 0;
+      }
     }
 
     &__input {
-      width: 100%;
       max-width: 992px;
     }
   }
@@ -64,20 +68,24 @@
     justify-content: space-between;
 
     &__label {
-      margin: 5px 0 5px 0;
       font-size: 1em;
+      margin: 5px 0;
       text-transform: uppercase;
+
+      @include viewport-7 {
+        margin: 10px 0;
+      }
     }
 
     &__input {
-      width: 100%;
       max-width: 992px;
     }
   }
 }
 
 .picker-buttons {
-  margin: 15px;
+  margin: 20px 0 0 0;
+
   display: flex;
   justify-content: center;
 
