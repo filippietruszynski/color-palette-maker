@@ -12,10 +12,6 @@
   @media (min-width: 992px) { @content; }
 }
 
-@mixin viewport-12 {
-  @media (min-width: 1200px) { @content; }
-}
-
 // variables
 
 $body-color: rgb(229, 229, 229);
