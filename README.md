@@ -17,5 +17,3 @@ Mobile-first web app created for designers, which helps match colors and generat
 
 ## Future improvement
 * Fixing range input bug in Firefox browser
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
