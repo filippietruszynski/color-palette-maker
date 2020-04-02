@@ -16,7 +16,7 @@ A web app created for designers, helps with matching colors and generating color
 
 ## Future improvement
 
-* Fixing range input margins bug in Firefox browser
+* Fixing range input margin bug in Firefox browser
 
 ## Screenshots
 
