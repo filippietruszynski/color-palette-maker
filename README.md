@@ -6,7 +6,7 @@ A web app created for designers, helps with matching colors and generating color
 
 ## Getting started
 
-===> [App Demo](https://filippietruszynski.github.io/color-palette-maker/ "Google's Homepage") <===
+===> [App Demo](https://filippietruszynski.github.io/color-palette-maker/ "App Demo") <===
 
 ## Technologies used
 
