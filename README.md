@@ -1,9 +1,8 @@
-![alt text](https://user-images.githubusercontent.com/33831675/78256649-1d91e200-74f9-11ea-95a4-5221acd18588.png "color palette")
+![color palette](https://user-images.githubusercontent.com/33831675/78258811-0a344600-74fc-11ea-99ce-01ebc47dd40d.png "color palette")
 
 # Color Palette Maker
 
-
-Mobile-first web app created for designers, which helps match colors and generate color palettes in an easy way. 
+A web app created for designers, helps with matching colors and generating color palettes in an easy way.<br><br>Color Palette Maker was designed with RWD and Mobile First approach.
 
 ## Getting started
 
@@ -16,4 +15,12 @@ Mobile-first web app created for designers, which helps match colors and generat
 * HTML
 
 ## Future improvement
-* Fixing range input bug in Firefox browser
+
+* Fixing range input margins bug in Firefox browser
+
+## Screenshots
+
+![Full HD Desktop UI](https://user-images.githubusercontent.com/33831675/78250404-1914fb80-74f0-11ea-88d3-1e5a143cd05f.png "Full HD Desktop UI")
+
+![iPhone 6/7/8 UI](https://user-images.githubusercontent.com/33831675/78250399-14e8de00-74f0-11ea-85ba-89d3341fcadd.png "iPhone 6/7/8 UI")
+
