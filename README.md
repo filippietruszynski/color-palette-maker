@@ -21,6 +21,6 @@ A web app created for designers, helps with matching colors and generating color
 ## Screenshots
 
 ![Full HD Desktop UI](https://user-images.githubusercontent.com/33831675/78250404-1914fb80-74f0-11ea-88d3-1e5a143cd05f.png "Full HD Desktop UI")
-
+Full HD Desktop UI
 ![iPhone 6/7/8 UI](https://user-images.githubusercontent.com/33831675/78250399-14e8de00-74f0-11ea-85ba-89d3341fcadd.png "iPhone 6/7/8 UI")
-
+iPhone 6/7/8 UI
