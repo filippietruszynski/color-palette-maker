@@ -2,7 +2,9 @@
 
 # Color Palette Maker
 
-A web app created for designers, helps with matching colors and generating color palettes in an easy way.<br><br>Color Palette Maker was designed with Responsive and Mobile First approach.
+Web app created for designers, helps with matching colors and generating color palettes in an easy way.
+
+Color Palette Maker was designed with Responsive and Mobile First approach.
 
 ## Getting started
 
