@@ -1,16 +1,13 @@
 // media queries
 
 @mixin viewport-5 {
-  @media (min-width: 568px) { @content; }
-}
+  @media (min-width: 568px) { @content; }}
 
 @mixin viewport-7 {
-  @media (min-width: 768px) { @content; }
-}
+  @media (min-width: 768px) { @content; }}
 
 @mixin viewport-9 {
-  @media (min-width: 992px) { @content; }
-}
+  @media (min-width: 992px) { @content; }}
 
 // variables
 
