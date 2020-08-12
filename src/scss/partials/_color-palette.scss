@@ -1,0 +1,43 @@
+.color-palette {
+  height: 55vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(0.25em, 1fr));
+
+  @include viewport-5 {
+    height: 67vh;
+
+    grid-template-columns: repeat(auto-fit, minmax(0.25em, 1fr));
+    grid-template-rows: 1fr;
+  }
+}
+
+.palette-sample {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @include viewport-5 {
+    flex-direction: column;
+  }
+
+  &__value {
+    font-size: 1.25em;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &-img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
