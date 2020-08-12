@@ -7,14 +7,19 @@ Web app created for designers, helps with matching colors and generating color p
 Color Palette Maker was designed with Responsive and Mobile First approach.
 
 ## Getting started
-
-===> [App Demo](https://filippietruszynski.github.io/color-palette-maker/ "App Demo") <===
+``` bash
+$ npm install
+```
+``` bash
+$ npm run start:dev
+```
 
 ## Technologies used
 
 * JavaScript
 * Sass
 * HTML
+* Webpack
 
 ## Future improvement
 
