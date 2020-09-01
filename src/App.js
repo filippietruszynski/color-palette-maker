@@ -31,7 +31,6 @@ class App {
       element.addEventListener('input', () => {
         this.getInputValues();
         this.editSample()
-        console.log('suwak ruszony')
       });
     });
 
@@ -78,7 +77,6 @@ class App {
     this.id = selectedSampleId;
 
     this.setInputValues();
-    console.log(this.hue, this.saturation, this.lightness, this.id);
   }
 
   editSample() {
